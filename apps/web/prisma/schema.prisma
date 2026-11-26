@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Model {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  age         Int
+  height      Int
+  weight      Int?     // Новое поле: вес
+  city        String
+  nationality String
+  bust        String
+  price1h     String   // Цена за 1 час
+  price2h     String?  // Цена за 2 часа
+  price4h     String?  // Цена за 4 часа
+  status      String   @default("Свободна")
+  bio         String?
+  services    String   // JSON array as string
+  photos      String   // JSON array as string
+  video       String?  // URL or path
+  likes       Int      @default(0) // Новое: лайки
+  views       Int      @default(0) // Новое: просмотры
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
