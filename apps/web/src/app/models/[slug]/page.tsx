@@ -74,7 +74,7 @@ export default async function ModelProfile({ params }: { params: Promise<{ slug:
             </p>
           </div>
 
-          {/* Кнопки связи: сплошной фон, белый текст, четкие иконки */}
+          {/* Кнопки связи: СПЛОШНОЙ ФОН, БЕЛЫЙ ТЕКСТ */}
           <div className="bg-[#0a0a0a] border border-[#1a1a1a] p-5 md:p-6 rounded-sm">
             <h3 className="text-sm uppercase tracking-widest text-text-dim mb-4">{t.contact}</h3>
             <div className="flex flex-col sm:flex-row gap-3">
